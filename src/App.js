@@ -1,3 +1,4 @@
+//app.jsx for rendering
 import Feed from "./Feed";
 
 function App() {
