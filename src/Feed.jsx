@@ -18,7 +18,7 @@ export default function Feed() {
     <div className="feed">
       <div className="card">
         <h1 className="heading">{advice1}</h1>
-        <button className="button" onClick={adviceGenerator}>
+        <button className="btn btn-color slide-btn btn-lg" onClick={adviceGenerator}>
           <span>GIVE ME ADVICE!</span>
         </button>
       </div>
