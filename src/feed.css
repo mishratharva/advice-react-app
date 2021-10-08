@@ -36,39 +36,43 @@ body {
   align-items: center;
   height: 582px;
 }
-
-.button {
-  position: relative;
-  outline: none;
-  text-decoration: none;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  text-transform: uppercase;
-  height: 200px;
-  width: 210px;
-  opacity: 1;
-  background-color: #ffffff;
-  border: 1px solid rgba(22, 76, 167, 0.6);
+.btn-color{
+    background: hsl(0, 86%, 53%);
+    color: #fff;
+    font-size:3rem;
+    margin: 2rem 0 2rem 0;
+    }
+.btn-color:hover{
+    color: #fff;
 }
+/* Wobble Vertical */
 
-.button span {
-  color: #164ca7;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.7px;
-}
-
-.button:hover {
-  animation: rotate 0.7s ease-in-out both;
-}
-
-.button:hover span {
-  animation: storm 0.7s ease-in-out both;
-  animation-delay: 0.06s;
-}
+  @keyframes slide-btn {
+    16.65% {
+         transform: translateY(.8rem);
+    }
+    33.3% {
+          transform: translateY(-.6rem);
+    }
+    49.95% {
+      transform: translateY(.4rem);
+    }
+    66.6% {
+      transform: translateY(-.2rem);
+    }
+    83.25% {
+      transform: translateY(.1rem);
+    }
+    100% {
+    transform: translateY(0);
+    }
+  }
+  .slide-btn:hover, .slide-btn:focus, .slide-btn:active {
+    animation-name: slide-btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+  }
 
 @keyframes rotate {
   0% {
